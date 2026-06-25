@@ -32,10 +32,9 @@ python3 -m http.server 8000   # → http://localhost:8000
 ## Assets
 
 `favicon.svg`, `apple-touch-icon.png`, `icon-192/512.png`, and `skald-mark.png` are generated from the
-canonical brand kit (the bold-slabbed Ansuz mark in a pointy-top hexagon). Brand tokens and the mark
-geometry live in the Skald repo's `branding/`.
+canonical brand kit (the bold-slabbed Ansuz mark in a pointy-top hexagon).
 
 ---
 
-© 2026 · marketing site · all rights reserved. Skald is early (slice 1) and source-available, not yet
-open-source.
+© 2026 · marketing site · all rights reserved. Skald is early (slice 1) and not yet public — the engine
+runs end-to-end and the thin web client is in development.

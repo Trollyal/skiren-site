@@ -320,6 +320,7 @@
   .schip{font-family:var(--mono);font-size:12.5px;border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:7px 15px;color:var(--muted);display:inline-flex;align-items:center;gap:9px}
   .schip .d{width:6px;height:6px;border-radius:50%;background:var(--dim)}
   .schip.live{color:var(--text);border-color:var(--aurora-line)} .schip.live .d{background:var(--aurora);box-shadow:0 0 8px var(--aurora)}
+  .schip.dev{color:var(--text);border-color:var(--rime-line)} .schip.dev .d{background:var(--rime);box-shadow:0 0 0 0 rgba(95,160,214,.6);animation:ping 2.4s infinite}
 
   /* ── terminal (the IR) ────────────────────────────── */
   .term{font-family:var(--mono);font-size:13px;line-height:1.7;padding:18px;color:var(--text);overflow-x:auto;
@@ -678,11 +679,11 @@
       <div class="lcell">
         <div class="lt">layer 03</div>
         <h3>Renderers</h3>
-        <p>Per-surface paint over the same IR. A rich web client today; IDE and terminal next — the terminal renderer degrades cleanly to ASCII.</p>
+        <p>Per-surface paint over the same IR. A web client is in development first; IDE and terminal follow — the terminal renderer degrades cleanly to ASCII.</p>
       </div>
     </div>
     <div class="surf-strip">
-      <span class="schip live"><span class="d"></span>web · live</span>
+      <span class="schip dev"><span class="d"></span>web · in dev</span>
       <span class="schip"><span class="d"></span>IDE · planned</span>
       <span class="schip"><span class="d"></span>terminal · planned</span>
     </div>
@@ -736,7 +737,7 @@
     <div class="finale">
       <div class="mk3"><svg viewBox="0 0 1024 1024" width="54" height="54"><use href="#mark" fill="#F2F5F8"/></svg></div>
       <h2>Read less. Lose nothing.</h2>
-      <p>Skald is early — slice 1: the engine and a thin web client run end-to-end, with the mode set and the Protocol taking shape, built in the open. The right shape, arriving automatically.</p>
+      <p>Skald is early — slice 1: the engine runs end-to-end and a thin web client is in development, with the mode set and the Protocol taking shape, built in the open. The right shape, arriving automatically.</p>
       <div class="cta-row">
         <a class="btn btn-prim" href="#demo">
           <svg viewBox="0 0 24 24"><path d="M12 5v14m0 0l-5-5m5 5l5-5"/></svg> See it reshape</a>
