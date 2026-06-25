@@ -204,7 +204,16 @@
   .sec-head.ctr{margin-left:auto;margin-right:auto;text-align:center}
   .sec-head h2{font-size:clamp(28px,4.8vw,42px);font-weight:700;letter-spacing:-.03em;margin:14px 0 12px;line-height:1.05}
   .sec-head p{color:var(--muted);font-size:16.5px;line-height:1.6}
-  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border) 30%,var(--border) 70%,transparent);border:0;max-width:var(--maxw);margin:0 auto}
+  /* full-bleed bands: content stays capped in .wrap, the panel + glow stretch edge-to-edge,
+     so wide screens read as intentional full-width bands instead of a stranded column.
+     Sections alternate plain / band, so each band's hairlines also separate its neighbours. */
+  section.band{
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+    background:
+      radial-gradient(120% 130% at 50% 0%, rgba(95,160,214,.055), transparent 60%),
+      linear-gradient(180deg, rgba(255,255,255,.022), rgba(255,255,255,.009));
+  }
+  section.band + section.band{border-top:0}
 
   /* ── paradigm split ───────────────────────────────── */
   .para{display:grid;gap:16px;grid-template-columns:1fr}
@@ -501,10 +510,8 @@
     </div>
   </div></section>
 
-  <hr class="divider">
-
   <!-- MODES -->
-  <section id="modes"><div class="wrap reveal">
+  <section id="modes" class="band"><div class="wrap reveal">
     <div class="sec-head">
       <span class="eyebrow">the shapes</span>
       <h2>Six shapes. You never pick one.</h2>
@@ -585,8 +592,6 @@
     <p class="modes-note">The reader never chooses a shape — that selection is itself the load Skald removes. When confidence is low it <b>abstains to prose</b> rather than guess: <span class="a">a false positive is the only error the expert reader punishes</span>. Revert is the rare escape hatch, not a per-reply decision.</p>
   </div></section>
 
-  <hr class="divider">
-
   <!-- RENDERER -->
   <section id="renderer"><div class="wrap reveal">
     <div class="sec-head">
@@ -609,10 +614,8 @@
     </div>
   </div></section>
 
-  <hr class="divider">
-
   <!-- LOSSLESS PROMISE -->
-  <section id="lossless"><div class="wrap reveal">
+  <section id="lossless" class="band"><div class="wrap reveal">
     <div class="sec-head ctr">
       <span class="eyebrow ctr">the promise</span>
       <h2>Reshaped. Never reduced.</h2>
@@ -631,8 +634,6 @@
       </div>
     </div>
   </div></section>
-
-  <hr class="divider">
 
   <!-- FEATURES -->
   <section id="features"><div class="wrap reveal">
@@ -656,10 +657,8 @@
     </div>
   </div></section>
 
-  <hr class="divider">
-
   <!-- ARCHITECTURE / PROTOCOL -->
-  <section id="protocol"><div class="wrap reveal">
+  <section id="protocol" class="band"><div class="wrap reveal">
     <div class="sec-head ctr">
       <span class="eyebrow ctr">open core</span>
       <h2>One IR. Three layers. Every surface.</h2>
@@ -711,8 +710,6 @@
     </div>
   </div></section>
 
-  <hr class="divider">
-
   <!-- FAMILY -->
   <section id="family"><div class="wrap reveal">
     <div class="family">
@@ -735,7 +732,7 @@
   </div></section>
 
   <!-- FINALE -->
-  <section id="get"><div class="wrap reveal">
+  <section id="get" class="band"><div class="wrap reveal">
     <div class="finale">
       <div class="mk3"><svg viewBox="0 0 1024 1024" width="54" height="54"><use href="#mark" fill="#F2F5F8"/></svg></div>
       <h2>Read less. Lose nothing.</h2>
